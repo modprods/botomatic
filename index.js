@@ -167,18 +167,10 @@ module.exports.handler = async function handler(event, context, callback) {
     hub_sid,
     host,
     duration = 30,
-    password,
     lobby,
     audio,
     slow
   } = queryStringParameters;
-
-  if (password !== "") {
-    return callback(null, {
-      statusCode: 200,
-      body: "bad password"
-    });
-  }
 
   const url = `https://${host}/${hub_sid}${lobby ? "" : "?bot=true"}`;
 
