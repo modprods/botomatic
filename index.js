@@ -108,7 +108,7 @@ async function run(url, duration, lobby, audio, slow) {
 
           break;
         } catch (e) {
-          console.log("No data node yet.");
+          console.log("Set bot movement: ", e.message);
           await new Promise(res => setTimeout(() => res(), 500));
         }
       }
@@ -142,7 +142,7 @@ async function run(url, duration, lobby, audio, slow) {
             });
             break;
           } catch (e) {
-            console.log("No audio node yet.");
+            console.log("Play audio: ", e.message);
             await new Promise(res => setTimeout(() => res(), 500));
           }
         }
