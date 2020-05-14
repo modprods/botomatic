@@ -5,7 +5,12 @@ as defined in bot-recording.json, and 'speaks' using bot-recording.mp3.
 [serverless](https://www.serverless.com) is recommended to deploy and
 manage this program.
 
-Deploy the script:
+Install serverless plugin deps using npm:
+
+	npm install
+
+Then set the AWS region to deploy botomatic to in serverless.yml.
+Finally, deploy the script:
 
 	serverless deploy
 
